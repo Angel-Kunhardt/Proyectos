@@ -1,0 +1,138 @@
+Clase (While)-------------------------------------------------------------
+
+using System;
+
+namespace Ejercicios
+{
+    class Program
+    {
+
+        static void Main(string[] args)
+        {
+
+            //Crear un programa que solicite 10 calificaciones de alumnos y muestre cuantos tienen calficaciones mayor o igual a 70.
+
+            int a = 0, i = 0, cal;
+
+            Console.WriteLine("Escriba 10 calificaciones");
+
+            while (i != 10)
+            {
+                cal = Convert.ToInt32(Console.ReadLine());
+                i += 1;
+                if (cal >=70)
+                {
+                    a += 1;
+                }
+            }
+            Console.WriteLine(a + " Estudiantes tienes una calificasion mayor o igual a 70");
+        }
+    }
+}
+
+
+Clase (For)-------------------------------------------------------------
+
+using System;
+
+namespace Ejercicios
+{
+    class Program
+    {
+
+        static void Main(string[] args)
+        {
+            int a= 0, cal;
+            for (int i = 1; i <= 10; i++) 
+            {
+                Console.WriteLine("Escriba la calificacion");
+                cal = Convert.ToInt32(Console.ReadLine());
+                if(cal >= 70)
+                {
+                    a += 1;
+                }
+            }
+            Console.WriteLine(a+" Estudiantes pasaron con calificacion mayor o igual a 70");
+        }
+    }
+}
+
+Clase(do While)-------------------------------------------------------------
+
+using System;
+
+namespace Ejercicios
+{
+    class Program
+    {
+
+        static void Main(string[] args)
+        {
+            int a;
+            do
+            {
+                Console.WriteLine("ingrese un valor entre 0 y 9999. Salir precione 0");
+                a = Convert.ToInt32(Console.ReadLine());
+                if (a >= 1000)
+                {
+                    Console.WriteLine("El numero tiene 4 digitos");
+                }
+                else if (a >= 100)
+                {
+                    Console.WriteLine("El numero tiene 3 digitos");
+                }
+                else if (a >= 10)
+                {
+                    Console.WriteLine("El numero tiene 2 digitos");
+                }
+                else
+                {
+                    Console.WriteLine("El numero tiene 1 digitos");
+                }
+
+            } while (a != 0);
+        }
+    }
+}
+
+Ejercicio 2-------------------------------------------------------------
+
+using System;
+
+namespace Ejercicios
+{
+    class Program
+    {
+
+        static void Main(string[] args)
+        {
+            //Crear un programa que permita ingresar las calificaciones y obtener el promedio, finalizar presionando 0.
+            int a = 0, pro = 0, cal = 0;
+            do
+            {
+                Console.WriteLine("ingrese Las calificaciones");
+                a = Convert.ToInt32(Console.ReadLine());
+                cal += a;
+                if (a > 0)
+                {
+                    for (int i = 0; i < 3; i++)
+                    {
+                        
+                        a = Convert.ToInt32(Console.ReadLine());
+                        cal += a;
+
+                    }
+                    pro = cal / 4;
+                    Console.WriteLine("Su promedio es " + pro);
+                }
+                else
+                {
+                    a = 0;
+                }
+                cal = 0;
+                pro = 0;
+
+            } while (a != 0);
+        }
+    }
+}

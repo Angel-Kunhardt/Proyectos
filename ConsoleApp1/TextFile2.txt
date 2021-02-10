@@ -1,0 +1,247 @@
+ejercicio 1---------------------------------------------------------------
+
+using System;
+
+namespace Ejercicios
+{
+    class Program
+    {
+
+        static void Main(string[] args)
+        {
+            int num2 = 0;
+            int res = 0;
+            Console.WriteLine("Escriba un numero");
+            int num = Convert.ToInt32(Console.ReadLine());
+            while (num > 0)
+            {
+                Console.WriteLine("Escriba otro numero");
+                num2 = num2 + 1;
+                res = res + num;
+                num = Convert.ToInt32(Console.ReadLine());
+            }
+            Console.WriteLine("Usted escribio " +num2 + " numeros");
+            Console.WriteLine("El resultado de la suma de los numeros que escribio es " +res);
+        }
+    }
+}
+
+
+ejercicio 2---------------------------------------------------------------
+
+using System;
+
+namespace Ejercicios
+{
+    class Program
+    {
+
+        static void Main(string[] args)
+        {
+            int sel = 0;
+            do 
+            {
+                Console.WriteLine("Que opcion desea elegir");
+                Console.WriteLine("Convertir grados a Celsius a Fahrenheit (1)");
+                Console.WriteLine("Convertir dólar a pesos (2)");
+                Console.WriteLine("Convertir metros a pies (3)");
+                Console.WriteLine("Salir (4)");
+                int num, num2 = 0;
+                double num3 = 0;
+                sel = Convert.ToInt32(Console.ReadLine());
+                if (sel == 1) ;
+                {
+                    Console.WriteLine("Escriba cuantos grados desea cambiar de celcius a fahrenheit");
+                    num = Convert.ToInt32(Console.ReadLine());
+                    num2 = (num * 9 / 5) +32;
+                    Console.WriteLine("Usted tiene " +num2+ " grados fahrenheit");
+                }
+                if (sel == 2) ;
+                {
+                    Console.WriteLine("Escriba cuantos dolares quiere cambiar a pesos");
+                    num = Convert.ToInt32(Console.ReadLine());
+                    num2 = num * 58;
+                    Console.WriteLine("Usted tiene " +num2+ " Pesos Dominicanos");
+                }
+                if (sel == 3) ;
+                {
+                   Console.WriteLine("Escriba cuantos metros quiere comvertir a pies");
+                   num = Convert.ToInt32(Console.ReadLine());
+                   num3 = num * 3.2808;
+                   Console.WriteLine("La conversion de " +num+ " metros es igual a " +num3+ " pies");
+                }
+            }
+            while (sel != 4);
+        }
+    }
+}
+
+ejercicio 3---------------------------------------------------------------
+
+using System;
+
+namespace Ejercicios
+{
+    class Program
+    {
+
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Este programa mostrara una tabla de multiplicar de los números  múltiplos de 5 que hay entre 1 y 500.");
+            Console.WriteLine("Precione Enter para continuar");
+            Console.ReadLine();
+            int num = 5;
+            int num2 = 1;
+            int res;
+            do
+            {
+                res = num * num2;
+                Console.WriteLine(num + " * " + num2 + " = " + res);
+                num2 += 1;
+            }
+            while (res != 500);
+        }
+    }
+}
+
+ejercicio 4-------------------------------------------------------------
+
+using System;
+
+namespace Ejercicios
+{
+    class Program
+    {
+
+        static void Main(string[] args)
+        {
+
+            Console.WriteLine("ingrese su salario");
+            double AFP, SFS, sal, ISR, num, num2;
+            sal = Convert.ToInt32(Console.ReadLine());
+            AFP = sal * 0.0287;
+            SFS = sal * 0.0304;
+            num2 = sal - AFP - SFS;
+            num = num2 * 12;
+            if (num <= 416220)
+            {
+                Console.WriteLine("Usted esta exento de impuesto de ISR");
+                Console.WriteLine("Su salario es " + sal);
+                Console.WriteLine("Su impuesto de AFP es " + AFP);
+                Console.WriteLine("Su impuesto de SFS es " + SFS);
+                Console.WriteLine("Su salario mensual final es " + num2);
+                Console.WriteLine("Su salario anual es " + num);
+            }
+            else if (num > 416220 && num2 <= 624329)
+            {
+                Console.WriteLine("Usted debe pagar un 15% de impuestos de ISR");
+                ISR = num * 0.15;
+                num -= ISR;
+                Console.WriteLine("Su salario es " + sal);
+                Console.WriteLine("Su impuesto de AFP es " + AFP);
+                Console.WriteLine("Su impuesto de SFS es " + SFS);
+                Console.WriteLine("Su impuesto de ISR es " + ISR);
+                Console.WriteLine("Su salario mensual final es " + num2);
+                Console.WriteLine("Su salario anual es " + num);
+            }
+            else if (num > 624329 && num2 <= 867123)
+            {
+                Console.WriteLine("Usted debe pagar un 20% de impuestos de ISR");
+                ISR = num * 0.20;
+                num -= ISR;
+                Console.WriteLine("Su salario es " + sal);
+                Console.WriteLine("Su impuesto de AFP es " + AFP);
+                Console.WriteLine("Su impuesto de SFS es " + SFS);
+                Console.WriteLine("Su impuesto de ISR es " + ISR);
+                Console.WriteLine("Su salario mensual final es " + num2);
+                Console.WriteLine("Su salario anual es " + num);
+            }
+            else if (num > 867123)
+            {
+                Console.WriteLine("Usted debe pagar un 25% de impuestos de ISR");
+                ISR = num * 0.25;
+                num -= ISR;
+                Console.WriteLine("Su salario es " + sal);
+                Console.WriteLine("Su impuesto de AFP es " + AFP);
+                Console.WriteLine("Su impuesto de SFS es " + SFS);
+                Console.WriteLine("Su impuesto de ISR es " + ISR);
+                Console.WriteLine("Su salario mensual final es " + num2);
+                Console.WriteLine("Su salario anual es " + num);
+            }
+            
+        }
+    }
+}
+
+
+========================================================================================================
+========================================================================================================
+========================================================================================================
+
+1
+
+using System;
+
+namespace Ejercicios
+{
+    class Program
+    {
+
+        static void Main(string[] args)
+        {
+            int b = 0, a = 0;
+            do
+            {
+                b += a;
+                Console.WriteLine("Escriba un numero");
+                a = Convert.ToInt32(Console.ReadLine());
+                
+            } while (a > 0);
+
+            Console.WriteLine("La suma de los numeros que escribio es "+b);
+        }
+    }
+}
+
+
+2
+
+
+using System;
+
+namespace Ejercicios
+{
+    class Program
+    {
+
+        static void Main(string[] args)
+        {
+            int a = 1, i = 0;
+            do
+            {
+
+                Console.WriteLine("Este programa escribira los numeros del 1 al 10");
+                Console.WriteLine("Escriba 0 si quiere terminar el programa");
+                Console.WriteLine("Escriba otro numero si quiere continuar");
+                Console.Clear();
+                a = Convert.ToInt32(Console.ReadLine());
+                while (a != 0)
+                {
+                    for (i = 1; i < 11; i++)
+                    {
+                        Console.WriteLine(i);
+                    }
+                    break;
+                }
+
+            } while (a != 0);
+
+        }
+    }
+}
+
+
+3
+
+
+
