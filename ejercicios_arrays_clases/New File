@@ -1,0 +1,370 @@
+*******************Ejercicio1**********************
+
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] num = new int[4];
+            int D=0, T=0;
+            Console.WriteLine("Escriba 4 numeros\n");
+            for (int i = 0; i < 4; i++)
+            {
+                num[i] = Convert.ToInt32(Console.ReadLine());
+                D ++;
+                T += num[i];
+            }
+            int MA = T / D;
+            Console.WriteLine("\nLa Medida aricmetica es "+MA);
+        }
+    }
+}
+
+*******************Ejercicio2**********************
+
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            float[] num = new float[5];
+            Console.WriteLine("Escriba 5 numeros\n");
+            for (int i = 0; i < 5; i++)
+            {
+                num[i] = Convert.ToInt32(Console.ReadLine());
+            }
+            Array.Sort(num);
+            Array.Reverse(num);
+            Console.Clear();
+            Console.WriteLine("Ustes ingreso estos numeros\n");
+            foreach (float i in num)
+            {
+                Console.WriteLine(i);
+            }
+        }
+    }
+}
+
+*******************Ejercicio3**********************
+
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] num = {0,31,28,31,30,31,30,31,31,30,31,30,31};
+            string[] ms = {"Inv", "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"};
+            int N;
+            Console.WriteLine("Escriba que el mes que desea saber cuantos dias tiene\n");
+            Console.WriteLine("Enero (1) Febrero (2) Marzo (3) Abril (4) Mayo (5) Junio (6)\n");
+            Console.WriteLine("Julio (7) Agosto (8) Septiembre (9) Octubre (10) Noviembre (11) Diciembre (12)\n");
+            N = Convert.ToInt32(Console.ReadLine());
+            if (N == 0)
+            {
+                Console.Clear();
+                Console.WriteLine("\nNumero invalido");
+                Console.WriteLine("\nElija un numero asignado a un mes");
+            } 
+            else
+            {
+                Console.WriteLine("\nEl mes "+ms[N]+" tiene "+num[N]+" dias");
+            }
+        }
+    }
+}
+
+*******************Ejercicio4**********************
+
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            float[] num = new float[10];
+            Console.WriteLine("Escriba 10 numeros\n");
+            for (int i = 0; i < 10; i++)
+            {
+                num[i] = Convert.ToInt32(Console.ReadLine());
+            }
+            Array.Sort(num);
+            Array.Reverse(num);
+            Console.Clear();
+            Console.WriteLine("El numero mas grande que escribio es "+num[0]);
+
+        }
+    }
+}
+
+*******************Ejercicio5**********************
+
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string[] Nom = new string[100];
+            int T = 0;
+            for (int i = 0; i < 100; i++)
+            {
+                Console.WriteLine("\nEscriba un nombre\n");
+                Nom[i] = Console.ReadLine();
+                if (Nom[i] == "" +
+                    "")
+                {
+                    break;
+                } 
+                else
+                {
+                    Console.Clear();
+                    T++;
+                }
+            }
+            Console.WriteLine("\nLos nombres que escribio son");
+            for (int i = 0; i < T; i++)
+            {
+                Console.WriteLine("\n"+Nom[i]);
+            }
+        }
+    }
+}
+
+*******************Ejercicio6**********************
+
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        struct Ficha
+        {
+            public string nombre;
+            public int PixAn;
+            public int PixAl;
+            public float Peso;
+        }
+        static void Main(string[] args)
+        {
+            int x, Ar=0;
+            string nom;
+            Ficha[] Img = new Ficha[700];
+            do
+            {
+                Console.WriteLine("\nEscriba (1) si quieres añadir una ficha nueva");
+                Console.WriteLine("Escriba (2) si quiere ver todas las fichas");
+                Console.WriteLine("Escriba (3) si quiere buscar un ficha por nombre");
+                Console.WriteLine("Escriba (0) si quiere salir\n");
+                x = Convert.ToInt32(Console.ReadLine());
+                switch (x)
+                {
+                    case 1:
+                        if (Ar != 699)
+                        {
+                            Console.WriteLine("\nEscriba el nombre de la imagen\n");
+                            Img[Ar].nombre = Console.ReadLine();
+                            Console.WriteLine("\nEscriba el tamaño de la imagen (Ancho de Pixeles)\n");
+                            Img[Ar].PixAn = Convert.ToInt32(Console.ReadLine());
+                            Console.WriteLine("\nEscriba el tamaño de la imagen (Alto de Pixeles)\n");
+                            Img[Ar].PixAl = Convert.ToInt32(Console.ReadLine());
+                            Console.WriteLine("\nEscriba el peso de la imagen (Peso en Kb por ejemplo 145,6)\n");
+                            Img[Ar].Peso = (float)Convert.ToDecimal(Console.ReadLine()); 
+                            Ar++;
+                            Console.WriteLine("\nImagen registrada (Precione cualquier tecla para continuar)\n");
+                            Console.ReadKey();
+                            Console.Clear();
+                        }
+                        else
+                        {
+                            Console.WriteLine("\nLimite de imagenes alcanzado imagenes");
+                            Console.WriteLine("Seprocedera a borrar las imagenes borrar las imagenes (Precione cualquier tecla para continuar)\n");
+                            Console.ReadKey();
+                            for (int i = 0; i < 700; i++)
+                            {
+                                Img[i].nombre = "null";
+                                Img[i].PixAn = 0;
+                                Img[i].PixAl = 0;
+                                Img[i].Peso = 0;
+                            }
+                            Console.Clear();
+                            Ar = 0;
+                        }
+                        break;
+                    case 2:
+                        Console.Clear();
+                        Console.WriteLine("\n");
+                        for (int i = 0; i < Ar; i++)
+                        {
+                            Console.WriteLine("Imagen: "+i+" Nombre: "+ Img[i].nombre);
+                        }
+                        Console.WriteLine("\nPrecione cualquier tecla para salir");
+                        Console.ReadKey();
+                        Console.Clear();
+                        break;
+                    case 3:
+                        Console.Clear();
+                        Console.WriteLine("Escriba el nombre de la imagen que desea buscar\n");
+                        nom = Console.ReadLine();
+                        for (int i = 0; i < Ar; i++)
+                        {
+                            if (nom == Img[i].nombre)
+                            {
+                                Console.WriteLine("\nImagen: " + i + " Nombre: " + Img[i].nombre);
+                                
+                            }
+                        }
+                        Console.WriteLine("\nPrecione cualquier tecla para salir");
+                        Console.ReadKey();
+                        Console.Clear();
+                        break;
+                    case 0:
+                        break;
+                }
+            } while (x != 0);
+        }
+    }
+}
+
+
+*******************Ejercicio7**********************
+
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            
+            Console.WriteLine("Escriba su nombre\n");
+            string Nombre = Console.ReadLine();
+            Console.WriteLine("\nSu nombre en letras es\n");
+            char [] letras = Nombre.ToCharArray();
+            for (int i = 0; i < letras.Length; i++)
+            {
+                Console.Write(letras[i]+ " ");
+            }
+        }
+    }
+}
+
+*******************Ejercicio8**********************
+
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double[] Alt = new double[5];
+            int UP = 0, DWN = 0;
+            float Pr=0;
+            Console.WriteLine("Escriba la altura de 5 personas en metros\n");
+            Console.WriteLine("Ejemplo (1.74)\n"); //la media de altura que se esta usando es la de RD
+            for (int i = 0; i < 5; i++)
+            {
+                Alt[i] = (double)Convert.ToDecimal(Console.ReadLine());
+                Pr += i;
+                if (i < 1.74)
+                {
+                    DWN++;
+                }
+                if (i > 1.74)
+                {
+                    UP++;
+                }
+            }
+            Pr /= 5;
+            Console.WriteLine("\nEl promedio de las 5 Alturas es "+Pr+" metros\n");
+            Console.WriteLine(UP +" personas estan por ensima de la media de altura\n");
+            Console.WriteLine(DWN +" personas estan por debajo de la media de altura\n");
+        }
+    }
+}
+
+*******************Ejercicio9**********************
+
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int x = 0,y = 0;
+            do
+            {
+                Console.WriteLine("\nEscriba el numero del que dese generar la tabla de multiplicar\n");
+                Console.WriteLine("Escriba (-1) si desea terminar\n");
+                x = Convert.ToInt32(Console.ReadLine());
+                if(x != -1)
+                {
+                    Mult(x, y);
+                }
+            } while (x != -1);
+        }
+
+
+        static void Mult(int num, int y)
+        {
+            Console.WriteLine("\nLa tabla de multiplicr de "+num+" es: \n");
+            for (int i = 0; i <= 10; i++)
+            {
+                y =num * i;
+                Console.WriteLine(num + " * " + i + " = " + y);
+            }
+        }
+    }
+}
+
+*******************Ejercicio10**********************
+
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int x;
+            string y;
+            Console.WriteLine("Escriba su Nombre\n");
+            y = Console.ReadLine();
+            Console.WriteLine("\nEscriba su Edad\n");
+            x = Convert.ToInt32(Console.ReadLine());
+            Check(y, x);
+        }
+
+
+        static void Check(string Nom, int Edad)
+        {
+            if (Edad >= 18)
+            {
+                Console.WriteLine("\n"+Nom+" es mayor de edad");
+            }
+            else
+            {
+                Console.WriteLine("\n"+Nom+ " no es mayor de edad");
+            }
+        }
+    }
+}
