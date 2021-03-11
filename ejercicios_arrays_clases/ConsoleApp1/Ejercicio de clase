@@ -1,4 +1,8 @@
-ï»¿using System;
+Crear un programa que simule un banco que tiene 3 clientes que 
+pueden hacer depósitos y retiros. También el banco requiere que 
+al final del día calcule la cantidad de dinero que hay depositado.
+
+using System;
 
 namespace ConsoleApp1
 {
