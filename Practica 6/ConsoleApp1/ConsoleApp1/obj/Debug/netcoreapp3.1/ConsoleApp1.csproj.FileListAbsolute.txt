@@ -1,0 +1,4 @@
+C:\Users\Kunhardt\source\repos\Angel-Kunhardt\Proyectos\Practica 6\ConsoleApp1\ConsoleApp1\obj\Debug\netcoreapp3.1\ConsoleApp1.csprojAssemblyReference.cache
+C:\Users\Kunhardt\source\repos\Angel-Kunhardt\Proyectos\Practica 6\ConsoleApp1\ConsoleApp1\obj\Debug\netcoreapp3.1\ConsoleApp1.AssemblyInfoInputs.cache
+C:\Users\Kunhardt\source\repos\Angel-Kunhardt\Proyectos\Practica 6\ConsoleApp1\ConsoleApp1\obj\Debug\netcoreapp3.1\ConsoleApp1.AssemblyInfo.cs
+C:\Users\Kunhardt\source\repos\Angel-Kunhardt\Proyectos\Practica 6\ConsoleApp1\ConsoleApp1\obj\Debug\netcoreapp3.1\ConsoleApp1.csproj.CoreCompileInputs.cache

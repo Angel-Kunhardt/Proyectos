@@ -1,0 +1,172 @@
+**********************Ejercicio1*************************
+
+using System;
+
+namespace ConsoleApp1
+{
+     class Persona
+     {
+        public string nombre;
+        public string apellido;
+        public int edad;ddd
+        public string cedula;
+
+        public Persona(string N, string A, int E, string C)
+        {
+            nombre = N;
+            apellido = A;
+            edad = E;
+            cedula = C;
+        }
+        public void Responsabilidad()
+        {
+            Console.WriteLine("Nombre: {0}", nombre);
+            Console.WriteLine("Apellido: {0}", apellido);
+            Console.WriteLine("Edad: {0}", edad);
+            Console.WriteLine("Cedula: {0}", cedula);
+        }
+     }
+
+    class Profesor : Persona
+    {
+        int Sueldo;
+        public Profesor(string N, string A, int E, string C, int S)
+        : base(N, A, E, C)
+        {
+            nombre = N;
+            apellido = A;
+            edad = E;
+            cedula = C;
+            Sueldo = S;
+        }
+        public void Mostrar()
+        {
+            Console.WriteLine("Nombre: {0}", nombre);
+            Console.WriteLine("Apellido: {0}", apellido);
+            Console.WriteLine("Edad: {0}", edad);
+            Console.WriteLine("Cedula: {0}", cedula);
+            Console.WriteLine("Sueldo: {0}$", Sueldo);
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Persona Angel = new Persona("Angel","Kunhardt", 20,"402-0048920-7");
+            Angel.Responsabilidad();
+            Console.WriteLine("\n----------------------\n");
+            Profesor Carlos = new Profesor("Carlos", "Julio", 35, "542-7484197-1",69000);
+            Carlos.Mostrar();
+            Console.ReadKey();
+        }
+    }
+}
+
+**********************Ejercicio2*************************
+
+using System;
+
+namespace ConsoleApp1
+{
+    public class Contacto
+    {
+        public string nombre;
+        public string apellido;
+        public string telefono;
+        public string direccion;
+
+        public Contacto(string N, string A, string T, string D) 
+        {
+            nombre = N;
+            apellido = A;
+            telefono = T;
+            direccion = D;
+        }
+
+        public void Saludar()
+        {
+            Console.WriteLine("Hola Soy " + nombre);
+            Console.WriteLine("Mi apellido es {0}", apellido);
+            Console.WriteLine("Mi telefono es {0}", telefono);
+            Console.WriteLine("Soy de {0}", direccion);
+        }
+    }
+
+    class Program
+    {
+        static void ProbarContacto(string N1, string N2)
+        {
+            Console.WriteLine("Hola mi nombe es "+N1+" ¿Como te llamas?");
+            Console.WriteLine("Yo me llamo "+N2);
+        }
+        static void Main(string[] args)
+        {
+            string A, S, D, F;
+            Console.WriteLine("Ingrese un contacto\n");
+            Console.WriteLine("Escriba su nombre");
+            A = Console.ReadLine();
+            Console.WriteLine("\nEscriba su Apellido");
+            S = Console.ReadLine();
+            Console.WriteLine("\nEscriba su Telefono");
+            D = Console.ReadLine();
+            Console.WriteLine("\nEscriba su Direccion");
+            F = Console.ReadLine();
+            Contacto C1 = new Contacto(A, S, D, F);
+            Console.Clear();
+
+            Console.WriteLine("Ingrese otro contacto\n");
+            Console.WriteLine("Escriba su nombre");
+            A = Console.ReadLine();
+            Console.WriteLine("\nEscriba su Apellido");
+            S = Console.ReadLine();
+            Console.WriteLine("\nEscriba su Telefono");
+            D = Console.ReadLine();
+            Console.WriteLine("\nEscriba su Direccion");
+            F = Console.ReadLine();
+            Contacto C2 = new Contacto(A, S, D, F);
+            Console.Clear();
+
+            ProbarContacto(C1.nombre, C2.nombre);
+
+            Console.ReadKey();
+        }
+    }
+}
+
+**********************Ejercicio3*************************
+
+using System;
+
+namespace ConsoleApp1
+{
+    public class A
+    {
+        public A()
+        {
+            Console.WriteLine("Esta es la clase A");
+        }
+    }
+    public class B : A
+    {
+        public B()
+        {
+            Console.WriteLine("\nEsta es la clase B");
+        }
+    }
+    public class C : B
+    {
+        public C()
+        {
+            Console.WriteLine("\nEsta es la clase C");
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            C Objeto = new C();
+            Console.ReadKey();
+        }
+    }
+}
