@@ -78,6 +78,7 @@ namespace ConsoleApp1
                             Console.Write("(" + i + ") " + name[i] + "\n");
                         }
                         X = Convert.ToInt32(Console.ReadLine());
+                        Console.Clear();
                         if (X == 0)
                         {
                             if (Cocacola.cantidad != 0)
@@ -91,7 +92,7 @@ namespace ConsoleApp1
                                 {
                                     while (B < Cocacola.precio)
                                     {
-                                        Console.WriteLine("Inserte otra moneda");
+                                        Console.WriteLine("Inserte otra moneda o billete");
                                         Y = Convert.ToInt32(Console.ReadLine());
                                         B += Y;
                                         
@@ -132,7 +133,7 @@ namespace ConsoleApp1
                                 {
                                     while (B < Pepsi.precio)
                                     {
-                                        Console.WriteLine("Inserte otra moneda");
+                                        Console.WriteLine("Inserte otra moneda o billete");
                                         Y = Convert.ToInt32(Console.ReadLine());
                                         B += Y;
 
@@ -173,7 +174,7 @@ namespace ConsoleApp1
                                 {
                                     while (B < PepsiMax.precio)
                                     {
-                                        Console.WriteLine("Inserte otra moneda");
+                                        Console.WriteLine("Inserte otra moneda o billete");
                                         Y = Convert.ToInt32(Console.ReadLine());
                                         B += Y;
 
@@ -214,7 +215,7 @@ namespace ConsoleApp1
                                 {
                                     while (B < Sprite.precio)
                                     {
-                                        Console.WriteLine("Inserte otra moneda");
+                                        Console.WriteLine("Inserte otra moneda o billete");
                                         Y = Convert.ToInt32(Console.ReadLine());
                                         B += Y;
 
@@ -255,7 +256,7 @@ namespace ConsoleApp1
                                 {
                                     while (B < Malta.precio)
                                     {
-                                        Console.WriteLine("Inserte otra moneda");
+                                        Console.WriteLine("Inserte otra moneda o billete");
                                         Y = Convert.ToInt32(Console.ReadLine());
                                         B += Y;
 
@@ -296,7 +297,7 @@ namespace ConsoleApp1
                                 {
                                     while (B < Colareal.precio)
                                     {
-                                        Console.WriteLine("Inserte otra moneda");
+                                        Console.WriteLine("Inserte otra moneda o billete");
                                         Y = Convert.ToInt32(Console.ReadLine());
                                         B += Y;
 
@@ -337,7 +338,7 @@ namespace ConsoleApp1
                                 {
                                     while (B < Redrock.precio)
                                     {
-                                        Console.WriteLine("Inserte otra moneda");
+                                        Console.WriteLine("Inserte otra moneda o billete");
                                         Y = Convert.ToInt32(Console.ReadLine());
                                         B += Y;
 
@@ -378,7 +379,7 @@ namespace ConsoleApp1
                                 {
                                     while (B < Countryclub.precio)
                                     {
-                                        Console.WriteLine("Inserte otra moneda");
+                                        Console.WriteLine("Inserte otra moneda o billete");
                                         Y = Convert.ToInt32(Console.ReadLine());
                                         B += Y;
 
@@ -419,7 +420,7 @@ namespace ConsoleApp1
                                 {
                                     while (B < Sevenup.precio)
                                     {
-                                        Console.WriteLine("Inserte otra moneda");
+                                        Console.WriteLine("Inserte otra moneda o billete");
                                         Y = Convert.ToInt32(Console.ReadLine());
                                         B += Y;
 
@@ -460,7 +461,7 @@ namespace ConsoleApp1
                                 {
                                     while (B < Gatorade.precio)
                                     {
-                                        Console.WriteLine("Inserte otra moneda");
+                                        Console.WriteLine("Inserte otra moneda o billete");
                                         Y = Convert.ToInt32(Console.ReadLine());
                                         B += Y;
 
