@@ -1,0 +1,48 @@
+tiempo
+
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		int e;
+
+		
+		DateTime fecha = new DateTime(2021 , 1 , 5);
+		Console.WriteLine(fecha.ToString("dd/MM/yyyy"));
+        for (int i = 1; i < 60; i++) 
+        {
+			e = i;
+			
+            Console.WriteLine(fecha.AddMonths(e).ToString("dd/MM/yyy"));
+			
+        }
+	}
+}
+
+
+posicionamiento
+
+using System;
+  
+public class GFG {
+  
+    // Main Method
+    public static void Main()
+    {
+  
+        // setting the window size
+        Console.SetWindowSize(40, 40);
+  
+        // setting buffer size of console
+        Console.SetBufferSize(80, 80);
+  
+        // using the method
+        Console.SetCursorPosition(20, 20);
+        Console.WriteLine("Hello GFG!");
+        Console.Write("Press any key to continue . . . ");
+  
+       
+    } 
+} 
