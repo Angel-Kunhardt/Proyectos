@@ -46,3 +46,8 @@ public class GFG {
        
     } 
 } 
+
+
+            x = (0.01 * 40000000.00) / (1 - Math.Pow(1 + 0.01, -60));
+            x = Math.Round(x, 2);
+            Console.WriteLine(x);
