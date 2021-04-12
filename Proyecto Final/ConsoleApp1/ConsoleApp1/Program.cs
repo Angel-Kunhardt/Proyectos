@@ -9,32 +9,29 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            int X = 1, Plazo;
+            int Plazo;
             double Prestamo, Tasa;
-            do
-            {
-                Console.WriteLine("CALCULADORA DE PRÉSTAMOS\n");
-                Console.WriteLine("Para hacer una simulacion de prestamo tiene");
-                Console.WriteLine("que proporcionar la siguiente informacion:\n");
 
-                Console.WriteLine("Monto de prestamo:\n");
-                Prestamo = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("CALCULADORA DE PRÉSTAMOS\n");
+            Console.WriteLine("Para hacer una simulacion de prestamo tiene");
+            Console.WriteLine("que proporcionar la siguiente informacion:\n");
 
-                Console.WriteLine("\nPlaso de pago (En meses):\n");
-                Plazo = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Monto de prestamo:\n");
+            Prestamo = Convert.ToDouble(Console.ReadLine());
 
-                Console.WriteLine("\nTasa de interes:");
-                Console.WriteLine("No escriba el numero con (%)\n");
-                Tasa = Convert.ToDouble(Console.ReadLine());
-                Tasa /= 100;
-                Console.Clear();
+            Console.WriteLine("\nPlaso de pago (En meses):\n");
+            Plazo = Convert.ToInt32(Console.ReadLine());
 
-                Amortizacion(Prestamo, Tasa, Plazo);
+            Console.WriteLine("\nTasa de interes:");
+            Console.WriteLine("No escriba el numero con (%)\n");
+            Tasa = Convert.ToDouble(Console.ReadLine());
+            Tasa /= 100;
+            Console.Clear();
 
-                Console.WriteLine("\nPrecione cualquier tecla para salir\n");
-                Console.ReadKey();
+            Amortizacion(Prestamo, Tasa, Plazo);
 
-            } while (X == 0);
+            Console.WriteLine("\nPrecione cualquier tecla para salir\n");
+            Console.ReadKey();
         }
 
         static void Amortizacion(double Prestamo, double Tasa, int Plazo)
@@ -76,7 +73,7 @@ namespace ConsoleApp1
 
             Console.SetCursorPosition(61, 4);
             Console.WriteLine("Balance");
-
+                
 
             for (int i = 1; i < Plazo+1 ; i++)
             {
