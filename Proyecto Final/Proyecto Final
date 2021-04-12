@@ -38,7 +38,7 @@ namespace ConsoleApp1
         {
             double Cuota, Interes, Capital, Balance;
 
-            DateTime fecha = new DateTime(2021, 5, 5);
+            DateTime fecha = new DateTime(2021, 4, 20);
 
             Cuota = (Tasa * Prestamo) / (1 - Math.Pow(1 + Tasa, -Plazo));
             Cuota = Math.Round(Cuota, 2);
